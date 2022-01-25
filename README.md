@@ -1,3 +1,7 @@
+# Best way
+Download Github desktop and clone, update and pull from that
+
+
 # Cloning Github Projects
 
 https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
