@@ -57,7 +57,11 @@ public class BasicBullet : MonoBehaviour
                 if (hit == circleCollider)
                     continue;
 
-                Debug.Log("Bullet hit player");
+                Health health = hit.gameObject.GetComponent<Health>();
+                if (health != null)
+                {
+                    health.Damage(damage);
+                }
                 // Do something when player gets hit
                 Destroy(gameObject);
                 
@@ -72,6 +76,11 @@ public class BasicBullet : MonoBehaviour
                     continue;
 
                 // Do something when enemy gets hit
+                Health health = hit.gameObject.GetComponent<Health>();
+                if (health != null)
+                {
+                    health.Damage(damage);
+                }
 
                 if (!penetratesEnemies)
                 {

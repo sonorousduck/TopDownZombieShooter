@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8294011574421038216}
   - component: {fileID: 8294011574421038217}
+  - component: {fileID: 8761010882802464626}
   - component: {fileID: 8294011574421038223}
   - component: {fileID: 8294011574421038218}
   - component: {fileID: 8294011574421038219}
@@ -128,6 +129,21 @@ MonoBehaviour:
   dashTime: 0.1
   dashSpeedModifier: 2
   dashCooldownTime: 1
+--- !u!114 &8761010882802464626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294011574421038222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9957ce11669064fba5580ce3dd2fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  immunityTime: 2
+  animator: {fileID: 0}
 --- !u!212 &8294011574421038223
 SpriteRenderer:
   m_ObjectHideFlags: 0
