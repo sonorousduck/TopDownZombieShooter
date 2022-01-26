@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6532402631647927613, guid: c5bb77713197e6146a1e3c3469e5817f, type: 3}
-  shotCoolDown: 1
+  roundsPerMinute: 200
 --- !u!114 &8294011573867913371
 MonoBehaviour:
   m_ObjectHideFlags: 0
