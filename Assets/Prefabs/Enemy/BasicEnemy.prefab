@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6443143594862769097}
+  - component: {fileID: 6443143594862769098}
+  - component: {fileID: 1839924099443876442}
   - component: {fileID: 6443143594862769096}
   - component: {fileID: 6443143594862769099}
-  - component: {fileID: 6443143594862769098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BasicEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,6 +34,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6443143594862769098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443143594862771253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5991e90c88dda45b75ced2398e4b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  movementAcceleration: 50
+  closenessTolerance: 0.1
+  goToPosition: {x: 0, y: 0}
+  canGoThroughWalls: 0
+--- !u!114 &1839924099443876442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443143594862771253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9957ce11669064fba5580ce3dd2fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  immunityTime: 0.5
+  animator: {fileID: 0}
 --- !u!212 &6443143594862769096
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -100,20 +133,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6443143594862769098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6443143594862771253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5991e90c88dda45b75ced2398e4b62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  movementAcceleration: 50
-  closenessTolerance: 0.1
-  goToPosition: {x: 0, y: 0}
-  canGoThroughWalls: 0

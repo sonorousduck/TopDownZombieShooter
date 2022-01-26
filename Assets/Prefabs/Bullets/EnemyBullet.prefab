@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  damage: 2
+  damage: 1
   isPlayerBullet: 0
   penetratesEnemies: 0
   penetratesWalls: 1
