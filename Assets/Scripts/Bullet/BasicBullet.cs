@@ -33,11 +33,6 @@ public class BasicBullet : MonoBehaviour
         CheckCollisions();
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawRay(transform.position, transform.up);
-    }
-
     void CheckCollisions()
     {
         // Check walls
