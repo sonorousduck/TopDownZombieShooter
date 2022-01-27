@@ -9,8 +9,14 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public float movementAcceleration;
     public float closenessTolerance;
+    public float visionDistance;
+    public bool shouldGoToPosition = true;
+    // For testing rn
+    public bool followPlayer = true;
+
     private Vector2 currentVelocity;
     private Vector2 currentWalkDirection;
+    public GameObject player;
 
 
     [SerializeField] private Vector2 goToPosition;
@@ -27,17 +33,35 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, goToPosition) > closenessTolerance)
+        if (shouldGoToPosition)
         {
-            // We should keep moving toward it
-            currentWalkDirection = (goToPosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+            if (followPlayer)
+            {
+                if (Vector2.Distance(transform.position, player.transform.position) > closenessTolerance && Vector2.Distance(transform.position, player.transform.position) < visionDistance )
+                {
+                    // We should keep moving toward it
+                    currentWalkDirection = (new Vector2(player.transform.position.x, player.transform.position.y) - new Vector2(transform.position.x, transform.position.y)).normalized;
+                }
+                else
+                {
+                    currentWalkDirection = Vector2.zero;
+                }
+            }
+            else
+            {
+                if (Vector2.Distance(transform.position, goToPosition) > closenessTolerance)
+                {
+                    // We should keep moving toward it
+                    currentWalkDirection = (goToPosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+                }
+                else
+                {
+                    currentWalkDirection = Vector2.zero;
+                }
+            }
+            HandleMovement();
+            HandleCollisions();
         }
-        else
-        {
-            currentWalkDirection = Vector2.zero;
-        }
-        HandleMovement();
-        HandleCollisions();
     }
 
     private void OnDrawGizmos()
